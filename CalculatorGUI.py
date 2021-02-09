@@ -6,8 +6,7 @@ calculator = Canvas(master, width=350, height=450, background='white')
 equation = Entry(master)
 
 def getEquation():
-    result = Label(master, text=eval(equation.get()))
-    result.pack()
+    calculator.create_text(175, 50, text=f'Result: {eval(equation.get())}')
 
 evaluate = Button(master, text='Evaluate', command=getEquation)
 
